@@ -1,0 +1,228 @@
+/* Paleta de Cores */
+:root {
+  --branco-claro: #fafafa;   /* Cor quase branca */
+  --cinza-claro: #e0e0e0;
+  --cinza-escuro: #222222;   /* Mais escuro para o fundo */
+  --branco-escuro: #121212;  /* Cor de fundo escuro */
+  --texto-claro: #ffffff;    /* Texto claro para o modo escuro */
+  --texto-escuro: #333333;   /* Texto escuro para o modo claro */
+  --azul-claro: #4e9fd1;     /* Azul vivo */
+  --laranja-claro: #ff7c4d;  /* Laranja vibrante */
+  --amarelo-claro: #ffea00;  /* Amarelo vibrante */
+  --verde-claro: #66bb6a;    /* Verde vibrante */
+}
+
+/* Alterações gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--branco-claro);
+  color: var(--texto-escuro);
+  margin: 0;
+  line-height: 1.6;
+  background-image: url('/Imagens/Fundo\ claro.png');
+  background-size: 660px;
+}
+
+h1, h2 {
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--texto-escuro);
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--cinza-claro);
+  color: var(--texto-escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--texto-escuro);
+  font-weight: bold;
+}
+
+header .menu-options {
+  display: flex;
+  gap: 10px;
+}
+
+header button {
+  background: none;
+  border: none;
+  color: var(--texto-escuro);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Texto de Boas-Vindas */
+.texto-destaque {
+  text-align: center;
+  color: var(--texto-escuro);
+  padding: 80px 20px;
+  background-color: var(--branco-claro);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.texto-destaque h1 {
+  font-size: 2.5rem;
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--azul-claro);
+  margin-bottom: 20px;
+}
+
+.texto-destaque p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.texto-destaque button {
+  background-color: var(--amarelo-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.texto-destaque button:hover {
+  background-color: var(--laranja-claro);
+}
+
+.lista-cursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 colunas de largura igual */
+  gap: 20px;
+  padding: 20px;
+}
+
+.curso {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.curso img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.curso h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.curso p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.curso button, .curso a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.curso button:hover, .curso a:hover {
+  background-color: #ffd700;
+  color: #333;
+  transform: scale(1.05);
+}
+
+.curso:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Modo Escuro */
+body[data-theme="dark"] {
+  background-color: var(--branco-escuro);
+  color: var(--texto-claro);
+}
+
+body[data-theme="dark"] header {
+  background-color: var(--cinza-escuro);
+}
+
+body[data-theme="dark"] header nav ul li a {
+  color: var(--texto-claro);
+}
+
+body[data-theme="dark"] footer {
+  background-color: var(--cinza-escuro);
+  color: var(--texto-claro);
+}
+
+body[data-theme="dark"] header nav ul li a:hover {
+  color: var(--azul-claro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrossel-content {
+    flex-direction: column;
+  }
+
+  .texto-destaque h1 {
+    font-size: 2rem;
+  }
+
+  .carrossel .curso {
+    flex: 1 1 100%; /* Exibe um curso por vez em telas pequenas */
+  }
+}
+
+@media (min-width: 769px) {
+  .carrossel .curso {
+    flex: 1 1 30%; /* Exibe três cursos por vez em telas maiores */
+  }
+}

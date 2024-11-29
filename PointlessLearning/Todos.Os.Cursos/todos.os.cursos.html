@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos os Cursos - Cursos Inúteis</title>
+  <link rel="stylesheet" href="/Todos.Os.Cursos/Style.todos.os.cursos.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="/Imagens/LOGO.png" alt="Logo Cursos Inúteis">
+      <h1>PointlessLearning</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/Menu/index.html" class="active" aria-current="page" data-translate="inicio">Início</a></li>
+        <li><a href="/Todos.Os.Cursos/todos.os.cursos.html" class="active" data-translate="todosCursos">Todos os Cursos</a></li>
+        <li><a href="/Carrinho/carrinho.html" data-translate="carrinho">Carrinho</a></li>
+      </ul>
+    </nav>
+    <div class="menu-options">
+      <button id="btnContraste" aria-label="Ativar alto contraste">🌙</button>
+      <button id="btnIdioma" aria-label="Trocar idioma">EN</button>
+    </div>
+  </header>
+
+  <!-- Título de Página -->
+  <section class="titulo-pagina">
+    <h2 data-translate="todosCursos">Todos os Cursos</h2>
+    <p data-translate="exploreCursos">Explore a lista completa de conhecimentos completamente (in)úteis!</p>
+  </section>
+
+  <!-- Lista de Cursos -->
+  <main class="lista-cursos">
+    <!-- Adicionar cursos do index -->
+    <article class="curso">
+      <img src="/Imagens/Origami com toalha.jpg" alt="Origami com Toalhas">
+      <h3 data-translate="cursoOrigami">Origami com Toalhas</h3>
+      <p data-translate="descricaoOrigami">Transforme toalhas em obras de arte. (Ou tente.)</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(0, 'Origami com Toalhas', 10010, '/Imagens/Origami com toalha.jpg')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/falando com plantas.jpg" alt="Falar Com Plantas">
+      <h3 data-translate="cursoFalarComPlantas">Falar com Plantas</h3>
+      <p data-translate="descricaoFalarComPlantas">Domine a comunicação com as plantas.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(1, 'Falar com Plantas', 8000, '/Imagens/falando com plantas.jpg')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/procrastinacao.jpg_large" alt="Procrastinação Nível Avançado">
+      <h3 data-translate="cursoProcrastinacao">Procrastinação Nível Avançado</h3>
+      <p data-translate="descricaoProcrastinacao">Aprenda a não fazer nada de forma profissional.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(2, 'Procrastinação Nível Avançado', 3500, '/Imagens/procrastinacao.jpg_large')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/PRETO.avif" alt="Língua de Sinais no Escuro">
+      <h3 data-translate="cursoLinguagemSinais">Língua de Sinais no Escuro</h3>
+      <p data-translate="descricaoLinguagemSinais">Descubra como um surdo conversa com um cego.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(2, 'Língua de Sinais no Escuro', 12999.99, '/Imagens/PRETO.avif')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/raiva-estudo.jpg" alt="Como Vencer Discussões Imaginárias">
+      <h3 data-translate="cursoDiscussao">Como Vencer Discussões Imaginárias</h3>
+      <p data-translate="descricaoDiscussao">Treine sua mente para sair vitorioso!</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(3, 'Como Vencer Discussões Imaginárias', 5000.00, '/Imagens/raiva-estudo.jpg')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/status do zap.jpeg" alt="Criação Profissional de Frases Impactantes para Status do WhatsApp">
+      <h3 data-translate="cursoFrasesStatus">Criação Profissional de Frases Impactantes para Status do WhatsApp</h3>
+      <p data-translate="descricaoFrasesStatus">Expresse suas ideias mais loucas de forma profissional, mesmo que ninguém nos seus contatos vá ver.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(4, 'Criação Profissional de Frases Impactantes para Status do WhatsApp', 7999.99, '/Imagens/status do zap.jpeg')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/pombo.webp" alt="Introdução à Linguagem Corporal dos Pombos">
+      <h3 data-translate="cursoPombo">Introdução à Linguagem Corporal dos Pombos</h3>
+      <p data-translate="descricaoPombo">Aprenda como fazer um pombo se apaixonar por você (não nos responsabilizamos por atos criminais que envolvam zoofilia com aves).</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(5, 'Introdução à Linguagem Corporal dos Pombos', 19999.99, '/Imagens/pombo.webp')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+    <article class="curso">
+      <img src="/Imagens/Núvem sugestiva.webp" alt="Signficado Secreto das Formas de Nuvens">
+      <h3 data-translate="cursoPombo">Signficado Secreto das Formas de Nuvens</h3>
+      <p data-translate="descricaoPombo">Descubra o segredo das nuvens.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(6, 'Signficado Secreto das Formas de Nuvens', 39999.99, '/Imagens/Núvem sugestiva.webp')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+
+    <article class="curso">
+      <img src="/Imagens/Dormindo.webp" alt="Dormir em Locais Inusitados">
+      <h3 data-translate="cursoPombo">Dormir em Locais Inusitados</h3>
+      <p data-translate="descricaoPombo">Aprenda a habilidade de dormir nas piores posições, nos piores lugares e piores momentos.</p>
+      <button class="btn-add-carrinho" onclick="adicionarAoCarrinho(7, 'Dormir em Locais Inusitados', 4000.00, '/Imagens/Dormindo.webp')">Adicionar ao Carrinho</button>
+      <a href="/Curso/Curso.html" data-translate="saibaMais">Saiba Mais</a>
+    </article>
+    
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p data-translate="rodape">Cursos Inúteis © 2024 - Sua passagem para a irrelevância criativa.</p>
+  </footer>
+
+  <script src="/Todos.Os.Cursos/JavraSCropt.js"></script>
+  
+</body>
+</html>

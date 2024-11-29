@@ -1,0 +1,308 @@
+/* Paleta de Cores */
+:root {
+  --branco-claro: #fafafa;   /* Cor quase branca */
+  --cinza-claro: #e0e0e0;    /* Cinza claro */
+  --cinza-escuro: #222222;   /* Mais escuro para o fundo */
+  --branco-escuro: #121212;  /* Cor de fundo escuro */
+  --texto-claro: #ffffff;    /* Texto claro para o modo escuro */
+  --texto-escuro: #333333;   /* Texto escuro para o modo claro */
+  --azul-claro: #4e9fd1;     /* Azul vivo */
+  --laranja-claro: #ff7c4d;  /* Laranja vibrante */
+  --amarelo-claro: #ffea00;  /* Amarelo vibrante */
+  --verde-claro: #66bb6a;    /* Verde vibrante */
+}
+
+/* Alterações gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('caminho/da/imagem-clara.jpg'); /* Imagem de fundo clara */
+  background-size: cover;
+  background-position: center;
+  color: var(--texto-escuro);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--texto-escuro);
+}
+
+/* Remove o sublinhado do link */
+.curso a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  background-color: var(--cinza-claro);
+  color: var(--texto-escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--texto-escuro);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--azul-claro);
+}
+
+header .menu-options {
+  display: flex;
+  gap: 10px;
+}
+
+header button {
+  background: none;
+  border: none;
+  color: var(--texto-escuro);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Texto de Boas-Vindas */
+.texto-destaque {
+  text-align: center;
+  color: var(--texto-escuro);
+  padding: 80px 20px;
+  background-color: var(--branco-claro);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.texto-destaque h1 {
+  font-size: 2.5rem;
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--texto-escuro);
+  margin-bottom: 20px;
+}
+
+.texto-destaque p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.texto-destaque button {
+  background-color: var(--amarelo-claro);
+  color: var(--branco-escuro);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.texto-destaque button:hover {
+  background-color: var(--laranja-claro);
+}
+
+/* Carrossel */
+.carrossel-container {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background-image: url('/Imagens/Fundo\ Escuro.png');
+  background-size: 660px;
+
+}
+
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.carrossel-content {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.curso {
+  flex: 0 0 calc(33.33% - 20px);
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+.curso.visivel {
+  display: block;
+}
+
+.curso img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.curso h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: var(--texto-escuro);
+}
+
+.curso p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.curso button {
+  background-color: var(--azul-claro);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.curso button:hover {
+  background-color: var(--laranja-claro);
+}
+
+.btn-nav {
+  background-color: var(--laranja-claro);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+}
+
+.btn-nav.prev {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-nav.next {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Link para "Ver Todos" */
+.ver-todos {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-todos-cursos {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--texto-escuro);
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.link-todos-cursos:hover {
+  color: var(--laranja-claro);
+}
+
+/* Comentários */
+.comentarios {
+  padding: 20px;
+  background-color: var(--branco-claro);
+  background-image: url('/Imagens/Fundo\ claro.png');
+  background-size: 660px;
+}
+
+.comentarios-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background-image: url('/Imagens/Fundo\ claro.png');
+  background-size: 660px;
+
+}
+
+.comentario {
+  background: var(--cinza-claro);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.comentario img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.comentario h3 {
+  margin: 5px 0;
+}
+
+.comentario blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrossel-content {
+    flex-direction: column;
+  }
+
+  .texto-destaque h1 {
+    font-size: 2rem;
+  }
+
+  .carrossel .curso {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .carrossel .curso {
+    flex: 1 1 30%;
+  }
+}

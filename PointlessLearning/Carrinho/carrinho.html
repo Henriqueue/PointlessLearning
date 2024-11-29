@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Cursos Inúteis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Carrinho/carrinho.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="/Imagens/logo.png" alt="Logo Cursos Inúteis">
+      <h1>PointlessLearning</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/Menu/index.html" class="active" aria-current="page">Início</a></li>
+        <li><a href="/Todos.Os.Cursos/todos.os.cursos.html">Todos os Cursos</a></li>
+        <li><a href="/Carrinho/carrinho.html">Carrinho <span id="contador-carrinho">0</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-options">
+      <button id="btnContraste" aria-label="Ativar alto contraste">🌙</button>
+      <button id="btnIdioma" aria-label="Trocar idioma">EN</button>
+    </div>
+  </header>
+
+  <!-- Título da Página -->
+  <section class="titulo-pagina">
+    <h2>Seu Carrinho</h2>
+    <p>Confira os cursos inúteis que você está pronto para "comprar".</p>
+  </section>
+
+  <!-- Itens do Carrinho -->
+  <section class="carrinho-container">
+    <div class="itens-carrinho"></div>
+
+    <!-- Resumo do Pedido -->
+    <aside class="resumo-pedido">
+      <h3>Resumo do Pedido</h3>
+      <p>Subtotal: <span id="subtotal">R$0,00</span></p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </aside>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Cursos Inúteis © 2024 - Sua passagem para a irrelevância criativa.</p>
+  </footer>
+
+  <script src="/Carrinho/carrinho.js"></script>
+</body>
+</html>

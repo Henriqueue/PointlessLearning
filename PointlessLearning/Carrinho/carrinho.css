@@ -1,0 +1,219 @@
+/* Paleta de Cores */
+:root {
+  --branco-claro: #fafafa;   /* Cor quase branca */
+  --cinza-claro: #e0e0e0;
+  --cinza-escuro: #222222;   /* Mais escuro para o fundo */
+  --branco-escuro: #121212;  /* Cor de fundo escuro */
+  --texto-claro: #ffffff;    /* Texto claro para o modo escuro */
+  --texto-escuro: #333333;   /* Texto escuro para o modo claro */
+  --azul-claro: #4e9fd1;     /* Azul vivo */
+  --laranja-claro: #ff7c4d;  /* Laranja vibrante */
+  --amarelo-claro: #ffea00;  /* Amarelo vibrante */
+  --verde-claro: #66bb6a;    /* Verde vibrante */
+}
+
+/* Geral */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--branco-claro);
+  color: var(--texto-escuro);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--azul-claro);
+  color: var(--texto-claro);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--texto-claro);
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--laranja-claro);
+}
+
+header nav ul li a.active {
+  background-color: var(--verde-claro);
+}
+
+/* Modo Claro */
+body {
+  background-color: var(--branco-claro);
+  color: var(--texto-escuro);
+  background-image: url('/Imagens/Fundo\ claro.png');
+  background-size: 660px;
+}
+
+/* Modo Escuro */
+body[data-theme="dark"] {
+  background-color: var(--branco-escuro);
+  color: var(--texto-claro);
+}
+
+header {
+  background-color: var(--azul-claro);
+}
+
+body[data-theme="dark"] header {
+  background-color: var(--cinza-escuro);
+}
+
+/* Estilo do Container do Carrinho */
+.carrinho-container {
+  background-color: var(--cinza-claro);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 10px;
+  color: var(--texto-escuro);
+}
+
+body[data-theme="dark"] .carrinho-container {
+  background-color: var(--cinza-escuro);
+}
+
+/* Estilo dos Itens no Carrinho */
+.itens-carrinho {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--branco-claro);
+}
+
+.item img {
+  width: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.detalhes-item {
+  flex: 1;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantidade button {
+  background-color: var(--azul-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantidade span {
+  font-size: 1rem;
+}
+
+.remover {
+  background-color: var(--laranja-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Resumo do Pedido */
+.resumo-pedido {
+  background-color: var(--verde-claro);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--texto-claro);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="dark"] .resumo-pedido {
+  background-color: var(--cinza-escuro);
+}
+
+.resumo-pedido h3 {
+  margin-bottom: 10px;
+}
+
+.resumo-pedido p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.resumo-pedido button {
+  background-color: var(--laranja-claro);
+  color: var(--texto-claro);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .carrinho-container {
+    flex-direction: column;
+  }
+
+  .resumo-pedido {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
