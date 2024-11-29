@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Inúteis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@400&family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Menu/Style.index.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/Imagens/LOGO.png" alt="Logo Cursos Inúteis">
+      <h1>PointlessLearning</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/Menu/index.html" class="active" aria-current="page">Início</a></li>
+        <li><a href="/Todos.Os.Cursos/todos.os.cursos.html">Todos os Cursos</a></li>
+        <li><a href="/Carrinho/carrinho.html">Carrinho <span id="contador-carrinho">0</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-options">
+      <button id="btnIdioma" aria-label="Trocar idioma">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="texto-destaque">
+      <h1>Bem-vindo ao PointlessLearning, a loja mais renomada de venda de Cursos Inúteis!</h1>
+      <p>Navegue pelo incrível catálogo de aprendizado... ou talvez não!</p>
+      <p>Aqui, você encontrará cursos sobre tudo o que você nunca precisou aprender</p>
+      <button id="comprar-destaque" class="btn-add-carrinho">Comece Agora</button>
+    </section>
+    
+
+    <section class="carrossel-container">
+      <h2>Cursos em Destaque</h2>
+      <div class="carrossel">
+        <button class="btn-nav prev" aria-label="Anterior">❮</button>
+        <div class="carrossel-content">
+          <!-- Curso 1 -->
+          <div class="curso">
+            <img src="/Imagens/Origami com toalha.jpg" alt="Curso 1">
+            <a href="/Curso/Curso.html">
+            <h3>Curso de Origami com Toalha</h3></a>
+            <p>Domine a arte de transformar toalhas em obras de arte!</p>
+            <p class="preco">R$ 9999,99</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+          
+          <!-- Curso 2 -->
+          <div class="curso">
+            <img src="/Imagens/PRETO.avif" alt="Curso 2">
+            <a href="/Curso/Curso.html">
+            <h3>Língua de Sinais no Escuro</h3></a>
+            <p>Descubra como um surdo conversa com um cego.</p>
+            <p class="preco">R$ 12999,99</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+    
+          <!-- Curso 3 -->
+          <div class="curso">
+            <img src="/Imagens/raiva-estudo.jpg" alt="Curso 3">
+            <a href="/Curso/Curso.html">
+            <h3>Como Vencer Discussões Imaginárias</h3></a>
+            <p>Treine sua mente para sair vitorioso!</p>
+            <p class="preco">R$ 5000,00</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+    
+          <!-- Curso 4 -->
+          <div class="curso">
+            <img src="/Imagens/status do zap.jpeg" alt="Curso 4">
+            <h3>Criação Profissional de Frases Impactantes para Status do WhatsApp</h3>
+            <p>Expresse suas ideias mais loucas de forma profissional, mesmo que ninguém nos seus contatos vá ver.</p>
+            <p class="preco">R$ 7999,99</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+    
+          <!-- Curso 5 -->
+          <div class="curso">
+            <img src="/Imagens/falando com plantas.jpg" alt="Curso 5">
+            <h3>Comunicação Acertiva com Plantas</h3>
+            <p>Se ninguém mais te aguenta, tente falar com plantas, afinal, pra onde mais elas iriam?</p>
+            <p class="preco">R$ 4999,99</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+    
+          <!-- Curso 6 -->
+          <div class="curso">
+            <img src="/Imagens/pombo.webp" alt="Curso 6">
+            <h3>Introdução à Linguagem Corporal dos Pombos</h3>
+            <p>Aprenda como fazer um pombo se apaixonar por você (não nos responsabilizamos por atos criminais que envolvam zoofilia com aves)</p>
+            <p class="preco">R$ 19999,99</p> <!-- Preço absurdo -->
+            <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+        <button class="btn-nav next" aria-label="Próximo">❯</button>
+      </div>
+    </section>
+    
+    
+    <div class="ver-todos">
+      <a href="/Todos.Os.Cursos/todos.os.cursos.html" class="link-todos-cursos">VER TODOS OS CURSOS</a>
+    </div>    
+    </section>
+
+    <!-- Comentários -->
+    <section class="comentarios">
+      <h2>O que nossos alunos dizem</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <img src="/Imagens/cacto.jpg" alt="Usuário 1">
+          <h3>Vanessa Vitória</h3>
+          <p>Curso: Falar com Plantas</p>
+          <p>Especialização: Especialista em conversar com cactus</p>
+          <p>⭐⭐⭐</p>
+          <blockquote>
+            "Aprendi muito! Agora consigo conversar com meus cactos, mas eles não parecem gostar de mim, agora estou toda espetada. Preciso de um módulo que os faça gostar de mim."
+          </blockquote>
+          <p class="data">25/11/2024</p>
+        </div>
+
+        <div class="comentario">
+          <img src="/Imagens/pombo.jpg" alt="Usuário 1">
+          <h3>LucasHonoPombosLover</h3>
+          <p>Curso: Introdução à Linguagem Corporal dos Pombos</p>
+          <p>Especialização: Sedução de pombos e outras aves</p>
+          <p>⭐⭐</p>
+          <blockquote>
+            "De fato consegui fazer um pombo se apaixonar por mim, mas agora nosso amor se tornou insustentável quando minha família descobriu nossa relação e quando descobri a quantidade de doenças que desenvolvi.  "
+          </blockquote>
+          <p class="data">22/01/2022</p>
+        </div>
+
+        <div class="comentario">
+          <img src="/Imagens/veo.png" alt="Usuário 1">
+          <h3>HenriqueLoLZerin</h3>
+          <p>Curso: Língua de Sinais no Escuro</p>
+          <p>Especialização: Interprete cego de mudos</p>
+          <p>⭐⭐⭐⭐⭐</p>
+          <blockquote>
+            "Após acabar cego por um acesso de raiva jogando lol, minha vida teria acabado se não fosse esse curso que me ajudou a tornar-me interprete de pessoas mudas."
+          </blockquote>
+          <p class="data">14/02/2006</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Cursos Inúteis. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/Menu/Javinha.js"></script>
+  <script>// Função para adicionar um curso ao carrinho
+    function adicionarAoCarrinho(cursoId, nome, preco) {
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];  // Verifica se já existem itens no carrinho
+    
+      // Verifica se o curso já está no carrinho
+      let cursoExistente = carrinho.find(item => item.id === cursoId);
+    
+      if (cursoExistente) {
+        cursoExistente.quantidade++;  // Se o curso já existir, apenas incrementa a quantidade
+      } else {
+        // Se o curso não existir, adiciona ele com a quantidade 1
+        carrinho.push({ id: cursoId, nome: nome, preco: preco, quantidade: 1 });
+      }
+    
+      // Atualiza o carrinho no localStorage
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+      // Feedback visual (opcional)
+      alert(`${nome} foi adicionado ao carrinho!`);
+    
+      // Opcional: Redirecionar o usuário para a página do carrinho
+      window.location.href = '/Carrinho/carrinho.html'; // ou '/Carrinho/carrinho.html'
+    }
+    
+    // Código para o botão "Adicionar ao Carrinho"
+    const botoesAdicionarCarrinho = document.querySelectorAll('.btn-add-carrinho');
+    
+    botoesAdicionarCarrinho.forEach((botao, index) => {
+      // Supondo que o índice do botão seja o índice do curso
+      botao.addEventListener('click', () => {
+        const curso = document.querySelectorAll('.curso')[index];
+        const nomeCurso = curso.querySelector('h3').textContent;
+        const precoCurso = parseFloat(curso.querySelector('.preco').textContent.replace('R$', '').trim());
+    
+        // Adiciona o curso ao carrinho
+        adicionarAoCarrinho(index + 1, nomeCurso, precoCurso);
+      });
+    });
+    </script>
+  
+</body>
+</html>
